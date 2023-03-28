@@ -1,0 +1,104 @@
+1. 리액트는 Component Based로 한 라이브러리이다.
+
+  Component들을 레고 블록 조립하듯 Component들을 모아서 개발
+
+  작은 Components 모여서 하나의 페이지를 만들 수 있다.
+  이러한 Components를 사용해서 코드의 재사용성을 높일 수 있다.
+
+  React Component는 어떠한 Props(속성)을 입력으로 만나서 React element를 생성하여 return해주는 것
+
+  객체 개념과 비슷
+
+  Component : 붕어빵 틀
+  Props : 붕어빵에 들어갈 재료
+  Element : 붕어빵
+
+2. Props(Property)
+  - React Component 속성
+    같은 모양으로 되어 있지만, 속성이 다를 수 있다.
+    Component에 전달할 다양한 정보를 담고 있는 JavaScript 객체
+
+  - 붕어빵에 들어가는 속재료를 말한다. 틀은 그대로고 결과는 붕어빵이다.
+    재료가 달라지며, 속성값이 다르다.
+
+  - Read-Only : 값을 변경할 수 없다.
+
+  - 붕어빵이 다 구어지면 속재료를 바꿀 수 없다.
+
+  - 다른 Props로 새로운 Element를 생성하려면, 새로운 값을 컴포넌트에 전달하여 새로 Element를 생성
+
+  - All React Components must act like pure functions with respect to their props.
+    모든 리액트 컴포넌트는 그들의 Props에 관해서는 Pure(순수)함수 가은 역할을 해야 한다.
+    모든 리액트 컴포넌트는 Props를 직접 바꿀 수 없고, 같은 Props에 대해서는 항상 같은 결과를 보여줄 것!
+
+  Props를 jsx에 사용할 때는 {} 사용하면 된다.
+
+Function Component 
+
+  function Welcome(props) {
+    return <h1>안녕, {props.name}</h1>
+  }
+
+Class Component
+
+  class Welcome extends React.Component {
+    render() {
+      return <h1>안녕, {this.props.name}</h1>
+    }
+  }
+
+Component 이름은 항상 대문자로 시작해야 한다.
+  React는 소문자로 시작하는 Component를 DOM 태그로 인식하기 때문이다.
+  (ex)
+    HTML div 태그로 인식
+      const element = <div />;
+
+    Welcome이라는 리액트 Component로 인식
+      const element = <Welcome name="인제" />;
+
+Component 렌더링
+  Component는 붕어빵 틀에 해당되며, 실제로 화면에 렌더링 되는 것은 아니다.
+  Component를 틀에 찍어 Element로 화면에 보여지는 것
+  Component를 통해 Element를 만들어야 화면에 보여진다.
+
+  (ex) 실제 렌더링되는 코드
+    function Welcome(props) {
+      return <h1>안녕, {props.name}</h1>;
+    }
+
+    const element = <Welcome name="인제" />;
+    ReactDOM.render(
+      element,
+      document.getElementById('root')
+    );
+
+
+Component 합성
+  React는 Component안에 또 다른 Component를 쓸 수 있다.
+  복잡한 화면을 여러 개의 Component로 나눠서 구현 가능하다.
+
+  (ex)
+    function Welcome(props) {
+      return <h1>Hello, {props.name}</h1>;
+    }
+
+    function App(props) {
+      return (
+        <div>
+          <Welcome name="Mike" /> // 하나의 Component
+          <Welcome name="Steve" />
+          <Welcome name="Jane" />
+        </div>
+      )
+    }
+
+    ReactDOM.render(
+      <App />,
+      document.getElementById('root')
+    );
+
+Component 추출
+  큰 Component에서 Component를 추출해서 사용할 수 있다.
+  잘 사용하면 재사용성이 올라감
+  개발 속도도 올라감
+  
