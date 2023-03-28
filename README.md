@@ -1,8 +1,8 @@
 # React
 version
 
-Node.js : v16.13.2
-npm : v8.1.2
+<div>Node.js : v16.13.2</div>
+<div>npm : v8.1.2</div>
 
 버전 조회
  - nvm list available
