@@ -17,3 +17,7 @@
 <th>4. 원하는 버전 사용
  <ol>nvm use {원하는 버전}</ol>
 </th><br>
+
+<th>
+ node-modules 설치후 확인 가능
+</th>
