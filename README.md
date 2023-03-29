@@ -1,6 +1,7 @@
 # React
 <h2>version</h2>
 
+<h3>Window OS</h3><br>
 <div>Node.js : v16.13.2</div>
 <div>npm : v8.1.2</div><br>
 
