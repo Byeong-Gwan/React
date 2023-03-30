@@ -1,0 +1,27 @@
+State (React에서 중요한 개념)
+Class Component도 있지만 거의 사용되지 않고 있다 (이런게 있다 정도 기억하자)
+
+State(상태)
+  - React에서의 State는 React Component의 상태를 의미한다.
+  - State(상태)가 정상인지 비정상인지를 말하는게 아니다.
+    React Component의 데이터라는 의미에 더 가깝다.
+    React Component의 변경 가능한 데이터 
+  - State는 사전에 먼저 정의된게 아니라 개발자가 정의한다.
+  - State 사용에 중요한 것은 렌더링이나 데이터 흐름에 사용되는 값만
+    State에 포함시켜야 한다.
+    이유로는 State가 변경될 경우 Component가 재렌더링이 되기 때문에 렌더링과 데이터 흐름과
+    관련 없는 값을 포함하면 불필요한 경우에 Component가 다시 렌더링되어 성능을 저하시킬 수 있기 때문이다.
+    
+    이러한 이유로 State에는 렌더링, 데이터 흐름에 사용되는 값만 포함시키고,
+    그렇지 않은 값은 Component에 인스턴스 빌드로 정의하면 된다.
+
+  - State는 JavaScript 객체 이다.
+  - State는 직접 수정해서는 안된다.(직접 수정이 가능은 하지만 좋지 못한 행동이다.)
+    setState 함수를 통한 수정을 해야된다.  
+    이유로는 Component 렌더링과 관련이 있기 때문에 마음대로 변경시 개발자가 원하는대로 작동하지 않을 수 있다.
+
+
+Lifecycle(생명주기 :: React Component Lifecycle)
+
+Component가 계속 존재하는 것이 아니라, 시간의 흐름에 따라 생성되고 업데이트 되다가 사라진다.
+
