@@ -38,7 +38,7 @@ function Comment(props) {
     <div style={styles.wrapper}>
       <div style={styles.imageContainer}>
         <img
-          src={img}
+          src={img} alt="~"
           style={styles.image}
         />
       </div>

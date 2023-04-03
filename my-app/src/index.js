@@ -4,11 +4,15 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 import NotificationList from './chapter_06/NotificationList';
+import Accommodate from './chapter_07/Accommodate';
+import ConfirmButton from './chapter_08/ConfirmButton';
+import ConfirmButton_Arrow_function from './chapter_08/ConfirmButton_Arrow_function';
+import ConfirmButton_ from './chapter_08/ConfirmButton_';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(
     <React.StrictMode>
-      <NotificationList />
+      <ConfirmButton_ />
     </React.StrictMode>
   );
 
