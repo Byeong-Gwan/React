@@ -1,0 +1,56 @@
+1. css (Cascading Style Sheets)
+
+  (1) Selector(선택자)의 유형
+    - Element Selector
+    - ID selector
+    - Class selector
+    - Universal selector (전체 "*")
+    - Grouping selector (묶어서 사용)
+    - Element 상태와 관련된 selector(img 참고)
+    
+  (2) 레이아웃과 관련된 속성
+    - Layout 화면에 Element들을 어떻게 배치할 것인지 
+      <img 참고>
+      a. dsplay  
+      b. visibility
+      c. position
+      d. 가로,세로 길이 관련 속성
+      e. Flexbox
+      f. flex-direction
+      g. align-items
+      h. justify-content
+
+  (3) Font와 관련된 속성
+    a. font-family
+    b. font-size
+    c. font-weight
+    d. font-style
+  
+  (4) 기타 많이 사용하는 css 속성
+    - background-color
+    - border(테두리)
+
+  (5) styled-components
+    - css 문법을 그대로 사용하면서 결과물을 스타일링 된 형태로 만들어주는 오픈소스 라이브러리
+    - 컴포넌트 개념이 들어 있어서 React와 궁합이 잘 맞다. 전 세계적으로 React 개발에 많이 사용된다.
+
+    <styled-components 설치 방법>
+      # npm을 사용하는 경우
+      - npm install --save styled-components
+
+      # yarn을 사용하는 경우
+      - yarn add styled-components
+
+  (6) styled-components 기본 사용법
+    - tagged template literal을 사용하여 구성요소의 스타일을 지정한다.
+    - template literal은 JavaScript 문법에서 제공한다.
+    - literal은 소스 코드에 고정된 값을 의미 상수와 다른 개념임
+      (ex) let number = 20 여기서 literal은 정수 값인 20이다.
+    - template literal은 literal을 template처럼 사용하는 것을 말한다.
+      ``를 사용하여 문자열을 사용하고 대체 가능한 익스프레션을 넣는 것
+    - tagged template literal을 사용한다.
+
+    a. styled-components의 props 사용하기
+      - props를 사용해서 조건이나 동적으로 변하는 값을 사용해서 style 할 수 있다.
+    b. styled-components의 스타일 확장하기
+      - ㄴ
