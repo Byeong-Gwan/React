@@ -1,0 +1,48 @@
+1. Context
+  - 기존에 방식은 부모에서 자식으로 단방향으로 이동을 했었다.
+    컴포넌트의 props를 통한 데이터 전달 식 방식이였으나, 이렇게 하게 되면, 
+    여러 컴포넌트를 거쳐 굉장히 자주 사용되는 데이터인 경우 기존 방식으로 하면 
+    코드도 복잡해지고 사용하는데 불편함이 많았다. 그래서 나오게 된것이 Context이다.
+
+  - 기존의 방식 대신 컴포넌트 트리를 통해 곧 바로 컴포넌트로 전달하는 새로운 방식
+    이로 인해서 어떠한 컴포넌트이든지 데이터에 쉽게 접근할 수 있게 해준다.
+
+  (1) Context를 언제 사용해야 될까?
+    - 여러 개의 Component들이 접근해야 하는 데이터인 경우
+    (ex) 로그인 여부, 로그인 정보, UI 테마, 현재 언어 등등...
+
+  (2) Context를 사용하기 전에 고려해야할 점
+    - 다른 레벨에 많은 컴포넌트가 특정 데이터를 필요로하는 경우에 사용합니다.
+      이게 아니라면 기존의 방식으로 코드를 짜야 한다. 
+    - 무조건 사용하는건 좋은건 아니다. 왜냐하면 컴포넌트와 Context가 연결되면 재사용성이 떨어지기 때문이다.
+
+2. Context API 사용
+  - React.createContext()를 통해서 Context 생성
+    (ex) const MyContext = React.createContext(기본값);
+  - 만약 상위 레벨에 매칭되는 Provider가 없다면 기본값이 사용된다.
+  - 기본값으로 undefined를 넣으면 기본값이 사용되지 않는다.
+
+  (1) Context.Provider
+    - 데이터를 제공해주는 컴포넌트
+    (ex) <MyContext.Provider value={/* some value */} >
+
+  (2) Provider value에서 주의해야 할 사항
+    - Provider 컴포넌트가 재렌더링될 때마다 모든 하위 consumer 컴포넌트가 재렌더링 된다.
+
+  (3) Context.Consumer
+    - Context를 구독(Consumer)하는 컴포넌트 이다.
+    - 함수 컴포넌트인 경우 사용
+    (ex)
+      <MyContext.Consumer>
+          { value => /* 컨텍스트의 값에 따라서 컴포넌트들을 렌더링 */ }
+      </MyContext.Consumer>
+
+  (4) Context.displayName
+    - Context는 displayName이라는 문자열 속성을 갖는다.
+
+  (5) 여러 개의 Context 동시에 사용하기
+    - 중첩해서 사용하면 된다. 그러나 너무 많은 중첩은 좋지 못하다.
+
+  (6) Context.Consumer Vs useContext() Hook
+    - 함수 컴포넌트에서 더욱 쉽게 사용할 수 있다.
+    
