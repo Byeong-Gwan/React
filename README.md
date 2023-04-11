@@ -43,3 +43,13 @@
 </th><br>
 
 <th>5. 위, 아래 방향키로 사용할 버전에 마추고 Enter</th><br>
+
+<ht>6. build 하기
+ <ol>npm run build</ol>
+</th><br>
+
+<ht>7. serve 설정
+ <ol>npm install -g serve</ol>
+ <ol>serve -s build</ol>
+</th><br>
+
