@@ -46,11 +46,13 @@
  <ol></ol>
 </th><br>
 
-<ht>6. build 하기
+<h3>build, serve 사용하기</h3><br>
+
+<ht>1. build 하기
  <ol>npm run build</ol>
 </th><br>
 
-<ht>7. serve 설정
+<ht>2. serve 설정
  <ol>npm install -g serve</ol>
  <ol>serve -s build</ol>
 </th><br>
