@@ -42,18 +42,11 @@
  <ol>sudo n</ol>
 </th><br>
 
-<th>5. 위, 아래 방향키로 사용할 버전에 마추고 Enter
- <ol></ol>
-</th><br>
+<th>5. 위, 아래 방향키로 사용할 버전에 마추고 Enter</th><br>
 
-<h3>build, serve 사용하기</h3><br>
+<h2>React Pj 만들기</h2>
 
-<ht>1. build 하기
- <ol>npm run build</ol>
-</th><br>
+<ol>npx create-react-app {원하는 프로젝트 이름}</ol>
 
-<ht>2. serve 설정
- <ol>npm install -g serve</ol>
- <ol>serve -s build</ol>
-</th><br>
-
+<th>npm_modules는 용량이 커서 올리지 못함(설치 방법)</th>
+<ol>npm i</ol>
