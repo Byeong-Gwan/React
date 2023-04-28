@@ -48,5 +48,7 @@
 
 <ol>npx create-react-app {원하는 프로젝트 이름}</ol>
 
-<th>npm_modules는 용량이 커서 올리지 못함(설치 방법)</th>
+<ol>npm_modules는 용량이 커서 올리지 못함(설치 방법)</ol>
 <ol>npm i</ol>
+
+<ol>Router 버전 : npm i react-router-dom@6</ol>
