@@ -10,15 +10,20 @@ import { emotionList } from "../util/emotion";
 const Diary = () => {
     // Path Variable 사용
     const { id } = useParams();
-    console.log(id);
     const diaryList = useContext(DiaryStateContext);
     const navigate = useNavigate();
     const [data, setData] = useState();
 
     useEffect(() => {
+        const titleElement = document.getElementsByTagName('title')[0];
+        titleElement.innerHTML = `감정 일기장 - ${id}번 일기`;
+    }, []);
+
+    useEffect(() => {
         if (diaryList.length >= 1) {
-            const targetDiary = diaryList.find((it) => parseInt(it.id) === parseInt(id));
-            console.log(targetDiary);
+            const targetDiary = diaryList.find(
+                (it) => parseInt(it.id) === parseInt(id)
+            );
 
             if (targetDiary) {
                 // 일기가 존재할 때
